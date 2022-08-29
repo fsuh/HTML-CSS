@@ -1,0 +1,13 @@
+/* Defining background color*/
+body {
+    background-color: yellowgreen;
+}
+/* Defining text color*/
+body {
+    color:black
+}
+h1 {
+    color:red;
+    text-align: center;
+    text-decoration-line: overline;
+}

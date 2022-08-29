@@ -1,0 +1,27 @@
+body {
+    font-family: "Dosis" sans-serif;
+    font-size: 16px;
+}
+table,
+td{
+    border: 1px solid #332;
+    border-collapse: collapse;
+    padding: 3px;
+}
+
+th{
+    background: coral;
+    color: white;
+}
+
+table {
+    margin: 20px;
+    margin-bottom: 200px;
+}
+
+.centre {
+    text-align: center;
+    background: #ebebeb;
+    font-weight: 800;
+
+}

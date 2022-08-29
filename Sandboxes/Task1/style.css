@@ -1,0 +1,15 @@
+/* Defining a universal background*/
+body{
+    background-color: lightblue;
+}
+/* Example of id */
+#my_id {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+}
+/* Example of class*/
+.my_class {
+    font-family: verdana, sans-serif;
+    font-size: 20px;
+}
