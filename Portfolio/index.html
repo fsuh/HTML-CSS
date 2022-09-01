@@ -1,26 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/CSS" href="mystyle.css">
-    <title>Portfolio Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Permanent+Marker&family=Raleway&family=Source+Sans+Pro:wght@900&family=Space+Mono:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+
+    <title>FUHSUH's Portfolio</title>
+    <link rel="stylesheet" href="mystyle.css">
 </head>
 <body>
-    <h1><strong>My Portfolio</strong></h1>
-    <ul>
-        <li>Projects</li>
-        <li>About me</li>
-        <li>Skills</li>
-        <li><a href="https://www.bc.fi/" target="_blank" rel="external">More about BCH</a></li>
-    </ul>
-    <h2>Projects</h2>
-    <img src="project-puzzle-pieces.jpeg" alt="Project Puzzle by Ajibu Consulting Ltd " width="200" height="100">
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-    <h2>About me</h2>
-    <img src="aboutMe.jpeg.crdownload" alt="About me by weebly.com" width="200" height="100">
-    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using <mark>'Content here, content here', </mark> it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like</p>
-    <h2>Skills</h2>
-    <img src="skills.webp" alt="Skills by thehansindia.com" width="200" height="100">
-    <p><em>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc</em></p>
-    <h2><a href="https://en.bc.fi/">More about HBC</a></h2>
+    <header>
+        <h1>Fuh Suh</h1>
+        <nav>
+            <ul>
+                <li><a href="#aboutMe"></a>About Me</li>
+                <li><a href="#mySkills"></a>Skills</li>
+                <li><a href="#myProjects"></a>Projects</li>
+                <li><a href="#contactMe"></a>Contact Me</li>
+                <li><a href="https://en.bc.fi/" title="Go to BCH HomePage"></a>More about BCH</li>
+            </ul>
+        </nav>
+        <h2>Welcome to my Portfolio</h2>
+    </header>
+    <main>
+        <section class="about">
+            <h2 id="aboutMe">About me</h2>
+            <img src="./aboutMe.jpeg.crdownload" alt="Photo of Me"/>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+        </section>
+        <section class="skills">
+            <h2 id="mySkills">Skills</h2>
+            <img src="./skills.webp" alt="Skills"/>
+            <p>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text</p>
+        </section>
+        <section class="projects">
+            <h2 id="myProjects">Projects</h2>
+            <img src="./project-puzzle-pieces.jpeg" alt="My Projects"/>
+            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+        </section>
+        <section class="contact">
+            <form>
+                <h2 id="contactMe">Contact Me</h2>
+                <label for="clientName">Your name
+                </label>
+                <input type="text" id="clientName" name="clientName" placeholder="Enter your name"/>
+                <label for="clientEmail">Your email
+                </label>
+                <input type="email" id="clientEmail" name="clientEmail" placeholder="Enter your email address"/>
+                <label for="clientSubject">Message Subject
+                </label>
+                <input type="text" id="clientSubject" name="clientSubject" placeholder="Subject"/>
+                <label for="clientText">Message
+                </label>
+                <input type="textarea" id="clientText" name="clientText" placeholder="Write your message"/>
+
+                <input type="submit" value="Send message"><a href="mailto:suh.fuh@edu.bc.fi"></a>
+            </form>
+        </section>
+        <footer>
+            <p>Copyright(c) 2022 by fsuh</p>
+        </footer>
+    </main>
+
 </body>
 </html>
