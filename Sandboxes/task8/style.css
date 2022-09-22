@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: white;
+   
+}
+header{
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;   
+}
+.site-title{
+    background-color: yellow;
+    flex: 1;
+    margin-top: 1rem;
+    display: flex;
+
+}
+.site-title p{
+    height: 150px;
+}
+nav{
+    
+}
+ul{
+    display: flex;
+    list-style-type: none;
+    margin-top: 1rem;
+}
+li{
+  background-color: lightpink;
+    width: 150px;
+    height: 150px;
+    border: 1px solid;
+
+}
+main{
+    
+}
+section{
+    
+}
+aside{
+    
+}
+footer{
+    
+}

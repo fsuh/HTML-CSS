@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+section{
+    background: #bebebe;
+    height: 400px;
+    width: 100vw;
+    padding: 1rem;
+    margin: 1rem;
+}
+.item{
+    height: 200px;
+    width: 200px;
+    background: salmon;
+    border-radius: 5px;
+    padding: 1rem;
+}
+#section-a .item:nth-child(2){
+    position: relative;
+}
+#section-a .item:nth-child(3){
+    position: relative;
+    background: orangered;
+    top: -100px;
+    left: 100px;
+}
+#section-b .item{
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+#section-c .item{
+    position: absolute;
+    bottom: 0;
+    right: 200px;
+}
+#section-d{
+    height: 2000px;
+}
+#section-d .item{
+    position: sticky;
+    top: 100px;
+    
+}

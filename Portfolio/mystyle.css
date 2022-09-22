@@ -1,14 +1,14 @@
+@media screen and (min-width: 480px) {
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 html {
-    font-family: 'Inter', sans-serif;
-    font-family: 'Space Mono', monospace;
+    /*font-family: 'Inter', sans-serif;
+    font-family: 'Space Mono', monospace;*/
     font-size: 14px;
 }
 
@@ -22,7 +22,6 @@ header{
     background-size: cover;
     color: white;
     opacity: 0.8;
-    align-items: center;
 }
 header h1{
     font-family: 'Space Mono', monospace;
@@ -51,49 +50,86 @@ nav ul{
     margin: 0 0 2rem;
     padding: 0;
     text-align: center;
+    overflow: hidden;
 }
 
-nav ul > li{
+li{
     float: left;
-    font-size: 1rem;
+    /*font-size: 1rem;
     font-family: 'Source Sans Pro', sans-serif;
     margin: 0 1rem 1rem 0;
     padding: 0;
-    text-align: center;
+    text-align: center;*/
 }
-nav a{
-    display: inline-flex;
-    padding: 1rem;
+li a{
+    color: yellow;
+    display: inline-block;
     text-align: center;
-    background-color: blueviolet;
-    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem;
 }
 
-nav a:hover{
-    background-color: #ddd;
-    color: black;
+li a:hover{
+    border-bottom: 6px solid darkblue;
+}
+
+main{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 100vh;
+
+}
+
+section.about {
+    background-color: skyblue;
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column wrap;
+    align-self: flex-start;
+    margin: 0;
 }
 
 section.about img{
+    position: relative;
     float: left;
-    width: 20%;
-    margin-right: 1rem;
+    width: 5rem;
 }
+
+section.about p{
+    display: flex;
+    
+    
+}
+
 section.skills img{
+    
     float: right;
     width: 20%;
     margin-left: 1rem;
+}
+
+section.skills p{
+    clear: both;
 }
 section.projects img{
     float: left;
     width: 20%;
     margin-right: 1rem;
 }
+
+section.projects p{
+    clear: both;
+}
 form{
     border-radius: 5px;
     background-color: lightslategrey;
     padding: 20px;
     display: block;
+
 }
 
 input[type=submit] {
@@ -122,3 +158,4 @@ input[type=text], input[type=email], input[type=textarea] {
 }
 
 
+}
