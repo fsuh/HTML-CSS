@@ -1,0 +1,123 @@
+:root {
+    --background-color: cornsilk;
+    --primary-color: skyblue;
+    --secondary-color: sandybrown;
+  }
+  
+  body {
+    background: var(--background-color);
+    /* display: grid;
+    justify-items: center;
+    align-items: center; */
+    /* height: 100vh; */
+    font-family: "Spartan", sans-serif;
+    margin: 3rem;
+    animation-name: backgroundColor;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;animation-direction: alternate-reverse;
+    animation-play-state: running;
+  }
+  
+ /* body {
+You can use an additional body selector to complete the background animation challenge.
+  }*/
+  
+/*  @keyframes gradient {
+
+Note that you are not changing from one gradient to another!
+
+  }*/
+
+  @keyframes backgroundColor {
+    from{background: var(--background-color);}
+    to{background: var(--primary-color);}
+    
+  }
+  
+  .box {
+    background: var(--primary-color);
+    height: 200px;
+    width: 200px;
+    box-shadow: 0 0 5px #333;
+    border-radius: 5px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .first-task {
+    background: var(--secondary-color);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    transition: width 4s, height 4s, background-color 4s;
+    transition-timing-function: ease-in-out;
+  }
+  .first-task:hover{
+    height: 200px;
+    width: 200px;
+    background-color: var(--primary-color);
+  }
+  
+
+  .second-task {
+    background: var(--secondary-color);
+    height: 100px;
+    width: 100px;
+    transition: background-color 4s, transform 4s;
+  }
+  .second-task:hover{
+    background-color: var(--primary-color);
+    transform: rotate(180deg);
+  }
+
+  .third-task {
+    background: var(--secondary-color);
+    height: 100px;
+    width: 100px;
+    transition: all 2s;
+    padding: 1rem;
+    
+  }
+
+  .third-task:hover{
+    transform: scale(0.5, 0.5);
+  }
+
+  .fourth-task {
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    background: goldenrod;
+    transition: border-top 4s, border-right 6s, border-bottom 8s,border-left 10s;
+    transition-timing-function: ease-in-out;
+  }
+  
+  .fourth-task:hover{
+    border-top: 10px solid darkgreen;
+    border-right: 10px solid darkgreen;
+    border-bottom: 10px solid darkgreen;
+    border-left: 10px solid darkgreen;
+  }
+
+  .fourth-task h3 {
+    padding: 25px;
+  }
+  
+
+  
+  .animated-circle {
+    background: var(--primary-color);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0 0 5px #333;
+  }
+  
+
