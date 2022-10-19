@@ -6,47 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Fuh Suh"/>
     <meta name="description" content="Portfolio of Fuh Suh">
-    <meta name="keywords" content="Web_developer, Full_stack , HTML, CSS, JavaScript, Portfolio, DevOps"/>
+    <meta name="keywords" content="Web_developer, Web_Development, Full_stack , HTML, CSS, JavaScript, Portfolio, DevOps"/>
 
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&family=Permanent+Marker&family=Raleway&family=Source+Sans+Pro:wght@900&family=Space+Mono:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
     <title>FUHSUH's Portfolio</title>
+
+    <link rel="shortcut icon" href="https://photos.google.com/photo/AF1QipNeGtd3qmMM7iKvSZOjg9uamZLvyisnOKALri6g" type="image/x-icon">
+
     <link rel="stylesheet" href="mystyle.css">
+
 </head>
 <body>
     <header>
-        <div class="myLogo">
-            <h1>Fuh Suh</h1>
-        </div>
         <nav>
+            <div class="myLogo">
+                <img src="./assets/favicon-32x32.ico" alt="log FuhSuh">
+            </div>
             <ul>
-                <li><a href="#aboutMe"></a>About Me</li>
-                <li><a href="#mySkills"></a>Skills</li>
-                <li><a href="#myProjects"></a>Projects</li>
-                <li><a href="#contactMe"></a>Contact Me</li>
-                <li><a href="https://en.bc.fi/" title="Go to BCH HomePage"></a>More about BCH</li>
+                <li><a href="#myProjects">Projects</a></li>
+                <li><a href="#aboutMe">About Me</a></li>
+                <li><a href="#mySkills">Skills</a></li>
+                <li><a href="#myGallery">Gallery</a></li>
+                <li><a href="#contactMe">Contact Me</a></li>
+                <li><a href="https://en.bc.fi/" title="Go to BCH HomePage">More about BCH</a></li>
             </ul>
         </nav>
-        <h2>Welcome to my Portfolio</h2>
+        <div class="intro">
+            <div class="welcome">
+                <div>Hello! I am <em>Fuh Suh </em></div>
+                <h2>Welcome to My Portfolio</h2>
+            </div>
+            
+        </div>
+        <div class="directLinks">
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+
     </header>
     <main>
         <section class="about">
+            <div class="aboutPhoto">
+                <img src="./assets/IMG_20181007_140126.jpg" alt="Photo of Me"/>
+            </div>
+            <div></div>
             <h2 id="aboutMe">About me</h2>
-            <img src="./aboutMe.jpeg.crdownload" alt="Photo of Me"/>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim magni deserunt amet, voluptate, ducimus consequuntur eos facere dolores, nihil nostrum cupiditate inventore deleniti nulla repellat architecto ipsam alias quod. Illo.</p>
         </section>
         <section class="skills">
             <h2 id="mySkills">Skills</h2>
             <img src="./skills.webp" alt="Skills"/>
-            <p>here are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores odit placeat et incidunt beatae, possimus doloremque? Sit consectetur vel hic.</p>
         </section>
         <section class="projects">
             <h2 id="myProjects">Projects</h2>
             <img src="./project-puzzle-pieces.jpeg" alt="My Projects"/>
-            <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi facilis quod cumque at necessitatibus, beatae reiciendis nam doloremque harum veritatis.</p>
         </section>
         <section class="contact">
             <form>
@@ -67,12 +84,17 @@
                 <input type="submit" value="Send message"><a href="mailto:suh.fuh@edu.bc.fi"></a>
             </form>
         </section>
-        <section>
-            <footer>
-                <p>Copyright(c) 2022 by fsuh</p>
-            </footer>
-        </section>
     </main>
+    <footer>
+        <div>
+            <ul>
+                <li><i class="fa-brands fa-linkedin"></i></li>
+                <li><i class="fa-brands fa-github"></i></li>
+                <li><i class="fa-brands fa-twitter"></i></li>
+            </ul>
+        </div>
+        <p>Copyright(c) 2022 by fsuh</p>
+    </footer>
 
 </body>
 </html>

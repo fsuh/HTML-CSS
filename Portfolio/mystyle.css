@@ -1,161 +1,92 @@
-@media screen and (min-width: 480px) {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+:root {
+    --background-color: #FFFFFF;
+    --primary-color: #6699FF;
+    --secondary-color: #B2CCFF;
+    --buttons: #66CC33;
+    --button-hover:#99CC33;
+    --color-bodytext: #000000;
+    --color-headline: #4D9FFF;
+    --test-color:#0A46F1;
 
-*{
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-html {
-    /*font-family: 'Inter', sans-serif;
-    font-family: 'Space Mono', monospace;*/
-    font-size: 14px;
+    overscroll-behavior: none;
 }
 
 body{
-    font-family: 'Source Sans Pro', sans-serif;
-
+    background-color: var(--background-color);
+    font-family: 'poppins', sans-serif;
+    color: var(--color-bodytext);
+    margin: auto;
+}
+header, main, footer {
+    padding: 2rem;
 }
 
 header{
-    background: lightskyblue url(./sunset.jpg) no-repeat fixed;
+    background-image: url("./assets/2191727.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
-    color: white;
-    opacity: 0.8;
-}
-header h1{
-    font-family: 'Space Mono', monospace;
-    margin: 0;
-    font-size: 35px;
-    text-align: center;
-}
+    background-position: center;
+    height: 500px;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 
-header h2{
-    font-family: 'Inter', sans-serif;
-    text-align: center;
-    font-size: 3rem;
-    margin: 7rem 3rem;
-    height: 25vh;
-
-}
-nav{
-    overflow: hidden;
-    border: none;
-    margin-left: 10rem;
-    
 }
 
 nav ul{
-    list-style-type: none;
-    margin: 0 0 2rem;
-    padding: 0;
-    text-align: center;
-    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 2rem;
+
+}
+.myLogo {
+    position:absolute;
+    top: 20px;
+    left: 0;
+    padding-left: 2rem;
 }
 
-li{
-    float: left;
-    /*font-size: 1rem;
-    font-family: 'Source Sans Pro', sans-serif;
-    margin: 0 1rem 1rem 0;
-    padding: 0;
-    text-align: center;*/
-}
-li a{
-    color: yellow;
+nav ul li { 
     display: inline-block;
-    text-align: center;
+    margin: 1rem;
+    color:var(--test-color);
+    font-weight: medium;
     text-decoration: none;
-    text-transform: uppercase;
-    padding: 1rem;
 }
 
-li a:hover{
-    border-bottom: 6px solid darkblue;
-}
-
-main{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 100vh;
-
-}
-
-section.about {
-    background-color: skyblue;
-    display: flex;
-    align-items: flex-start;
-    flex-flow: column wrap;
-    align-self: flex-start;
-    margin: 0;
-}
-
-section.about img{
+.welcome{
     position: relative;
-    float: left;
-    width: 5rem;
+    top: 50%;
+    left: 20%;
+    color: var(--test-color);
+    font-weight: ;
 }
 
-section.about p{
+.directLinks{
+    position: relative;
+    left: -50%;
+    bottom: 0;
     display: flex;
-    
-    
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 1rem;
 }
 
-section.skills img{
-    
-    float: right;
-    width: 20%;
-    margin-left: 1rem;
+.directLinks .fa-brands{
+    color: var(--test-color);
+    margin: 10px;
 }
 
-section.skills p{
-    clear: both;
-}
-section.projects img{
-    float: left;
-    width: 20%;
-    margin-right: 1rem;
-}
-
-section.projects p{
-    clear: both;
-}
-form{
-    border-radius: 5px;
-    background-color: lightslategrey;
-    padding: 20px;
-    display: block;
-
-}
-
-input[type=submit] {
-    background-color: blue;
-    color: white;
-    font-weight: bold;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type=submit]:hover {
-    background-color: skyblue
-}
-
-input[type=text], input[type=email], input[type=textarea] {
-   width: 100%;
-   padding: 12px;
-   border: 1px solid darkgray;
-   border-radius: 4px;
-   box-sizing: border-box;
-   margin-top: 6px;
-   margin-bottom: 16px;
-   resize: vertical;
-}
-
-
+.aboutPhoto img {
+    width: 200px;
+    height: 200px;
 }
