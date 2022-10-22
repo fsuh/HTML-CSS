@@ -18,41 +18,44 @@
     overscroll-behavior: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
-    background-color: var(--background-color);
+    background-color: var(--secondary-color);
     font-family: 'poppins', sans-serif;
     color: var(--color-bodytext);
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-rows: 100px 1fr 60px;
+    grid-gap:10px;
     margin: auto;
 }
-header, main, footer {
-    padding: 2rem;
+
+header, main, footer{
+    margin: 20px;
 }
 
+/* Header */
 header{
-    background-image: url("./assets/2191727.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 500px;
-    display:flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-nav ul{
-    position: absolute;
+    grid-area: header;
+    position: sticky;
     top: 0;
-    right: 0;
-    padding-right: 2rem;
-
-}
-.myLogo {
-    position:absolute;
-    top: 20px;
     left: 0;
-    padding-left: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .myLogo img{
+    width: 100px;
+    height: 100px;
+}
+
+header a {
+    color: var(--test-color);
+    text-decoration: none;
 }
 
 nav ul li { 
@@ -60,33 +63,84 @@ nav ul li {
     margin: 1rem;
     color:var(--test-color);
     font-weight: medium;
-    text-decoration: none;
 }
 
-.welcome{
-    position: relative;
-    top: 50%;
-    left: 20%;
-    color: var(--test-color);
-    font-weight: ;
+/* Sections*/
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: "homePage" "aboutMe" "skills" "projects" "contact";
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 10px;
+    margin: auto;
 }
-
-.directLinks{
-    position: relative;
-    left: -50%;
+.homePage{
+    grid-area: homePage;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 100vh;
+}
+.homePage > .directLinks{
+    position: fixed;
+    left: 0;
     bottom: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    margin-bottom: 1rem;
+    margin-left: 20px;
+    height: 100px;
 }
 
-.directLinks .fa-brands{
+.homePage > .directLinks > .fa-brands{
     color: var(--test-color);
-    margin: 10px;
+    font-size: 20px;
+    margin: 5px;
 }
 
-.aboutPhoto img {
+.homePage > .welcome{
+    color: var(--test-color);
+}
+
+.aboutMe {
+    grid-area: aboutMe;
+    background: var(--background-color);
+    margin: 0;
+    height: 100vh;
+
+}
+
+.aboutMe img {
+    float: right;
     width: 200px;
     height: 200px;
+
+}
+
+.aboutMe > h2{
+    color: var(--test-color);
+    text-shadow: 2px 2px var(--primary-color);
+
+}
+
+.skills{
+    grid-area: skills;
+    height: 100vh;
+}
+
+.projects{
+    grid-area: projects;
+    background: var(--background-color);
+    height: 100vh;
+}
+
+.contact{
+    grid-area: contact;
+    background: var(--test-color);
+    height: 100vh;
+
+}
+
+footer{
+    grid-area: footer;
 }
