@@ -90,28 +90,48 @@ main {
     flex-direction: column;
     margin-left: 20px;
     height: 100px;
+    color: var(--test-color);
 }
 
 .homePage > .directLinks > .fa-brands{
-    color: var(--test-color);
     font-size: 20px;
     margin: 5px;
 }
 
-.homePage > .welcome{
+.homePage > .welcome {
     color: var(--test-color);
+}
+
+.homePage > .welcome div{
+    box-shadow: 4px 4px 5px var(--color-headline);
+    border-radius: 20px;
+    margin-bottom: 40px;
+    width: 350px;
+    
+}
+
+.homePage > .welcome > div span{
+    font-size: 48px;
+}
+
+.homePage > .welcome > div em{
+    font-size: 40px;
+}
+
+.homePage > .welcome > h2{
+    font-size: 40px;
 }
 
 .aboutMe {
     grid-area: aboutMe;
     background: var(--background-color);
     margin: 0;
+    padding: 20px;
     height: 100vh;
-
 }
 
 .aboutMe img {
-    float: right;
+    float: left;
     width: 200px;
     height: 200px;
 
@@ -138,7 +158,6 @@ main {
     grid-area: contact;
     background: var(--test-color);
     height: 100vh;
-
 }
 
 footer{
