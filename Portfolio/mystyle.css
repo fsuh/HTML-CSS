@@ -26,15 +26,15 @@ body{
     background-color: var(--secondary-color);
     font-family: 'poppins', sans-serif;
     color: var(--color-bodytext);
+    max-width: 1400px;
+    width: 100vw;
     display: grid;
     grid-template-areas: "header" "main" "footer";
     grid-template-rows: 100px 1fr 60px;
-    grid-gap:10px;
-    margin: auto;
 }
 
 header, main, footer{
-    margin: 20px;
+    margin: 0;
 }
 
 /* Header */
@@ -49,8 +49,9 @@ header{
 }
 
 header .myLogo img{
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: auto;
+    padding: 10px;
 }
 
 header a {
@@ -62,17 +63,19 @@ nav ul li {
     display: inline-block;
     margin: 1rem;
     color:var(--test-color);
-    font-weight: medium;
+}
+
+nav ul li:hover{
+    background-color: var(--color-headline);
+   
 }
 
 /* Sections*/
 main {
     grid-area: main;
     display: grid;
-    grid-template-areas: "homePage" "aboutMe" "skills" "projects" "contact";
-    grid-template-rows: repeat(5, 1fr);
-    grid-gap: 10px;
-    margin: auto;
+    grid-template-areas: "homePage" "aboutMe" "skills" "projects" "gallery" "contact";
+    grid-template-rows: repeat(6, 100vh);
 }
 .homePage{
     grid-area: homePage;
@@ -80,10 +83,10 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    height: 100vh;
+    width: 100vw;
 }
 .homePage > .directLinks{
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 0;
     display: flex;
@@ -105,7 +108,7 @@ main {
 .homePage > .welcome div{
     box-shadow: 4px 4px 5px var(--color-headline);
     border-radius: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 120px;
     width: 350px;
     
 }
@@ -120,46 +123,313 @@ main {
 
 .homePage > .welcome > h2{
     font-size: 40px;
+    margin-bottom: 120px;
 }
 
 .aboutMe {
     grid-area: aboutMe;
     background: var(--background-color);
-    margin: 0;
-    padding: 20px;
-    height: 100vh;
+    padding: 120px 20px 0 20px;
+    width: 100vw;
+  
+   
+   
 }
 
 .aboutMe img {
-    float: left;
-    width: 200px;
-    height: 200px;
-
+    float: right;
+    max-width: 30%;
+    height: auto;
+    padding-left: 30px;
 }
 
 .aboutMe > h2{
     color: var(--test-color);
     text-shadow: 2px 2px var(--primary-color);
+    padding: 10px;
+    letter-spacing: 2px;
+}
+
+.aboutMe .details {
+    text-align: left;
+    text-indent: 50px;
+    letter-spacing: 1px;
+    line-height: 2.0;
+    word-spacing: 5px;
 
 }
 
 .skills{
     grid-area: skills;
-    height: 100vh;
+    width: 100vw;
+    padding: 120px 20px 0 20px;
+
 }
 
+.skills h2{
+    color: var(--test-color);
+    text-shadow: 2px 2px var(--primary-color);
+    padding: 5px;
+    letter-spacing: 2px;
+}
+
+.skills p{
+    text-align: left;
+    text-indent: 50px;
+    letter-spacing: 1px;
+    line-height: 2.0;
+    word-spacing: 5px;
+    color: var(--color-bodytext);
+}
+
+.skills .skillSet{
+    padding: 20px;
+    margin-top: 10px;
+    display: flex;
+   flex-flow: row wrap;
+   justify-content: space-evenly;
+   text-align: center;
+    gap: 100px;
+}
+
+.skills .skillSet i{
+    font-size: 3rem;
+    color: var(--background-color);
+}
+
+.skills .skillSet h3{
+    color: var(--background-color);
+}
+
+.skillSet > div{
+    width: 200px;
+    height: 150px;
+    background-color: var(--color-headline);
+    border-radius: 20px;
+    padding: 20px;
+
+}
+
+.skillSet progress{
+    height: 1.5rem;
+    background: transparent;
+    -webkit-appearance: none;
+}
+
+progress[value]::-webkit-progress-bar{
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+
+}
+
+progress[value]::-webkit-progress-value{
+    background: var(--test-color);
+    border-radius: 5px;
+    background-size: 35px 20px;
+}
 .projects{
     grid-area: projects;
     background: var(--background-color);
-    height: 100vh;
+    width: 100vw;
+    padding:90px 20px 0 20px;
+
 }
+
+.projects h2{
+    color: var(--test-color);
+    text-shadow: 2px 2px var(--primary-color);
+    padding: 10px;
+    letter-spacing: 2px;
+
+}
+
+.projects .projectList{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.projectList > div{
+    width: 250px;
+    height: 300px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 var(--secondary-color);
+    cursor: pointer;
+}
+
+.projectList img{
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 4px 8px 0 var(--primary-color);
+}
+.gallery{
+    grid-area: gallery;
+    width: 100vw;
+    padding: 90px 20px 0 20px;
+}
+
+.gallery h2{
+    margin-top: 20px;
+    font-size: x-large;
+    color: var(--test-color);
+    text-shadow: 2px 2px var(--primary-color);
+
+}
+
+.gallery p{
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+
+}
+
+.galleryPics {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 5.5vw);
+    grid-gap: 5px;
+}
+
+.gallery img{
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image1{
+    grid-column: 1/ span 2;
+    grid-row: 1 /span 4;
+}
+
+.image2{
+    grid-column: 3/ span 2;
+    grid-row: 1 /span 2;
+}
+.image3{
+    grid-column: 3/ span 2;
+    grid-row: 3 /span 2;
+}
+.image4{
+    grid-column: 5/ span 4;
+    grid-row: 1 /span 5;
+}
+.image5{
+    grid-column: 1/ span 1;
+    grid-row: 5 /span 1;
+}
+.image6{
+    grid-column: 1/ span 1;
+    grid-row: 6 /span 1;
+}
+.image7{
+    grid-column: 1/ span 1;
+    grid-row: 7 /span 1;
+}
+.image8{
+    grid-column: 2/ span 4;
+    grid-row: 5 /span 3;
+}
+.image9{
+    grid-column: 5/ span 4;
+    grid-row: 6 /span 2;
+}
+.image10{
+    grid-column: 7/ span 3;
+    grid-row: 6 /span 2;
+}
+
 
 .contact{
     grid-area: contact;
-    background: var(--test-color);
-    height: 100vh;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--background-color);
+    font-size: large;
+    
+    
+}
+.contact form{
+    padding: 10px;
+    width: 80%;
+    display: inline-block;
+    text-align: center;
+    background-color: var(--test-color);
+    color: var(--background-color);
+    border-radius: 10px;
+    
+}
+
+.contact h2{
+    margin: 20px;
+    font-size: x-large;
+    color: var(--background-color);
+    text-shadow: 2px 2px var(--primary-color);
+}
+
+.contact input[type=text], input[type=email]{
+    width: 100%;
+    height: 50px;
+    padding: 12px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    resize: vertical;
+    
+}
+
+.contact #textarea{
+    height: 150px;
+    box-sizing: border-box;
+
+}
+
+.contact label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+   
+}
+
+.contact input[type=submit]{
+    background-color: var(--buttons);
+    color: var(--background-color);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.contact input[type=submit]:hover{
+    background-color: var(--button-hover);
+
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75{
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+}
+
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
 }
 
 footer{
     grid-area: footer;
+    text-align: center;
+    background-color: var(--background-color);
+
 }
